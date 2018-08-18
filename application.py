@@ -25,9 +25,9 @@ db = scoped_session(sessionmaker(bind=engine))
 def index():
 #Log in
 # "SELECT * FROM users WHERE (username = 'input_username') AND (password = 'input_password')";
-    flights = db.execute("SELECT * FROM flights").fetchall()
+    books = db.execute("SELECT * FROM books").fetchall()
 #    flights = db.execute("SELECT * FROM flights").fetchall()
-    return render_template("boo.html", flights=flights)
+    return render_template("index.html", books=books)
 
 
 #    for table in dbtables:
